@@ -124,7 +124,7 @@ body {
     transition: 0.5s;
 }
 
-.botao__chutarOuNovoJogo:hover {
+.botao__chutarOuNovoJogo:active {
     background-color: var(--rosa-mais-escuro);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
 }

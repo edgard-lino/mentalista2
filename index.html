@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O Mentalista</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="placar">
+        <div class="placar__container">
+            <div class="placar__vitorias">
+                <h2 class="placar__titulo">Vitórias</h2>
+                <p class="placar__vitorias__pontos placar__pontos">0</p>
+            </div>
+            <div class="placar__derrotas">
+                <h2 class="placar__titulo">Derrotas</h2>
+                <p class="placar__derrotas__pontos placar__pontos">0</p>
+            </div>
+            <button class="placar__botao">ZERAR PLACAR</button>
+            
+        </div>
+    </div>
+    <div class="jogo__container">
+        <h2 class="jogo__titulo">Adivinhe um número entre 1 e 10</h2>
+        <img class="jogo__imagem" src="./imagens/cerebro.png" alt="Imagem do jogo">
+        <p class="jogo__texto">Você tem três tentativas</p>
+        <input type="number" class="jogo__chute" min="1" max="10">
+        <button class="botao__chutarOuNovoJogo">CHUTAR</button>
+    </div>
+    
+</body>
+</html>

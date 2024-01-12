@@ -1,0 +1,264 @@
+:root {
+    --bege: #FAEDDA;
+    --branco: white;
+    --verde-claro: #51b9ae;
+    --verde-escuro: #318786;
+    --preto: black;
+    --rosa-claro: #f59b90;
+    --rosa-escuro: #aa1c4c;
+    --rosa-mais-escuro: #9b0b3b;
+
+    --gradiente-fundo: radial-gradient(circle, rgba(81,185,174,1) 0%, rgba(49,135,134,1) 70%);
+    
+    --fonte-principal: 'Ribeye', serif;
+}
+
+body {
+    background: var(--gradiente-fundo);
+    font-family: var(--fonte-principal);
+}
+
+.placar {
+    background-color: var(--rosa-escuro);
+    height: 3rem;
+    width: 100%;
+}
+
+.placar__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.placar__vitorias {
+    display: flex;
+    gap: 1rem;
+    grid-area: 1 / 1 / 2 / 2;
+    margin: auto;
+}
+
+.placar__titulo {
+    color: var(--branco);
+    font-size: 1.2rem;
+}
+
+.placar__pontos {
+    background-color: var(--bege);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    width: 3rem;
+    text-align: center;
+}
+
+.placar__derrotas {
+    display: flex;
+    gap: 1rem;
+    grid-area: 1 / 2 / 2 / 3;
+    margin: auto;
+}
+
+.placar__botao {
+    display: none;
+}
+
+.jogo__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    width: 90%;
+}
+
+.jogo__titulo {
+    color: var(--branco);
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    min-height: 13rem;
+    grid-area: 1 / 1 / 2 / 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin: auto;
+} 
+
+.jogo__imagem {
+    grid-area: 2 / 2 / 3 / 3;
+    margin: auto;
+    text-align: center;
+    width: 10rem;
+}
+
+.jogo__texto {
+    color: var(--bege);
+    font-size: 1.5rem;
+    grid-area: 4 / 1 / 5 / 3;
+    text-align: center;
+}
+
+.jogo__chute {
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--preto);
+    font-family: var(--fonte-principal);
+    font-size: 5rem;
+    grid-area: 2 / 1 / 3 / 2;
+    height: 8rem;
+    margin: auto;
+    text-align: center;
+    width: 8rem;
+}
+
+.botao__chutarOuNovoJogo {
+    background-color: var(--rosa-escuro);
+    border: none;
+    border-radius: 2rem;
+    color: var(--branco);
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    grid-area: 3 / 1 / 4 / 3;
+    height: 3.7rem;
+    margin: 2rem auto;
+    width: 18rem;
+    transition: 0.5s;
+}
+
+.botao__chutarOuNovoJogo:hover {
+    background-color: var(--rosa-mais-escuro);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.486);
+}
+
+@media screen and (min-width: 700px) {
+    .placar {
+        height: 4.5rem;
+    }
+
+    .placar__titulo {
+        font-size: 1.5rem;
+        user-select: none;
+    }
+
+    .placar__pontos {
+        font-size: 1.5rem; 
+        width: 4rem;  
+    }
+
+    .placar__vitorias {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .placar__derrotas {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+
+    .placar__botao {
+        background-color: var(--bege);
+        border: none;
+        border-radius: 2rem;
+        color: var(--rosa-escuro);
+        display: flex;
+        font-family: var(--fonte-principal);
+        grid-area: 1 / 2 / 3 / 3;
+        margin: auto;
+        padding: 0.2rem 1rem;
+        text-align: center;
+    }
+    
+    .jogo__container {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        max-width: 800px;
+        padding: 2rem 0;
+    }
+
+    .jogo__titulo {
+        grid-area: 1 / 1 / 2 / 5;
+        font-size: 3.5rem;
+        line-height: 5rem;
+        text-align: left;
+    }
+    
+    .jogo__imagem {
+        grid-area: 1 / 5 / 2 / 7;
+        margin: auto;        
+        width: 100%;
+    }
+    
+    .jogo__texto {
+        font-size: 2.5rem;
+        grid-area: 2 / 1 / 3 / 7;
+        margin: 2rem 0;
+    }
+    
+    .jogo__chute {
+        border-radius: 0.7rem;
+        font-size: 6rem;
+        grid-area: 3 / 1 / 4 / 3;
+        height: 9rem;
+        width: 13rem;
+    }
+    
+    .botao__chutarOuNovoJogo {
+        grid-area: 3 / 3 / 4 / 7;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .placar__container {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1200px;
+    }
+
+    .placar {
+        height: 4rem;
+    }
+
+    .placar__vitorias {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .placar__derrotas {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+
+    .placar__botao { 
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .jogo__container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-top: 3rem;
+        max-width: 1100px;
+    }
+
+    .jogo__titulo {
+        font-size: 4.5rem;
+        grid-area: 1 / 1 / 2 / 3;
+        line-height: 5rem;
+        min-height: none;
+        padding: 0;
+    }
+
+    .jogo__imagem {
+        grid-area: 1 / 3 / 4 / 5;
+        margin-right: 0;
+        max-width: 25rem;
+    }
+
+    .jogo__texto {
+        grid-area: 2 / 1 / 3 / 3;
+        margin: auto 0;
+        text-align: left;
+    }
+
+    .jogo__chute {
+        grid-area: 3 / 1 / 4 / 2;
+        margin: auto 0;
+        width: 11rem;
+    }
+
+    .botao__chutarOuNovoJogo {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+}
